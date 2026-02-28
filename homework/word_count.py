@@ -111,7 +111,7 @@ if __name__ == "__main__":
 
     initialize_folder("files/input/")
     delete_folder("files/output/")
-    generate_file_copies(1000)
+    generate_file_copies(5000)
     start_time = time.time()
 
     hadoop(
@@ -123,6 +123,4 @@ if __name__ == "__main__":
 
     end_time = time.time()
     print(f"Tiempo de ejecución: {end_time - start_time:.2f} segundos")
-    
-    
     
