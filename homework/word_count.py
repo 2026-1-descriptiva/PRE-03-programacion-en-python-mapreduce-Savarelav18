@@ -34,6 +34,8 @@ def delete_folder(folder):
 
 
 def generate_file_copies(n):
+    # Agrega esta línea para limpiar la carpeta antes de generar las copias
+    initialize_folder("files/input/")
 
     for file in glob.glob("files/raw/*"):
         with open(file, "r", encoding="utf-8") as f:
@@ -111,7 +113,7 @@ if __name__ == "__main__":
 
     initialize_folder("files/input/")
     delete_folder("files/output/")
-    generate_file_copies(1000)
+    generate_file_copies(5000)
     start_time = time.time()
 
     hadoop(
